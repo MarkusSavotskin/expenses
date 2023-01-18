@@ -2,8 +2,7 @@ import './App.css';
 import './components/Expenses/ExpenseItem'
 import Expenses from './components/Expenses/Expenses';
 
-function App() {
-
+const App = () => {
     const expenses = [
         {
             date: new Date(2023, 0, 10),
@@ -26,8 +25,7 @@ function App() {
         <div className="App">
             <Expenses data={expenses}></Expenses>
         </div>
-    )
-        ;
+    );
 }
 
 export default App;
