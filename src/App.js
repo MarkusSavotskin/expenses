@@ -9,17 +9,22 @@ const App = () => {
         {
             date: new Date(2023, 0, 10),
             title: 'New book',
-            price: 30.99
+            amount: 30.99
         },
         {
             date: new Date(2023, 0, 5),
             title: 'Ice cream',
-            price: 3.99
+            amount: 3.99
+        },
+        {
+            date: new Date(2023, 3, 8),
+            title: 'Guitar',
+            amount: 989.99
         },
         {
             date: new Date(2024, 5, 12),
             title: 'New jeans',
-            price: 99.99
+            amount: 99.99
         }
     ]
     const addExpenseHandler = (expense) => {
@@ -30,7 +35,7 @@ const App = () => {
     return (
         <div className="App">
             <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-            <Expenses data={expenses}></Expenses>
+            <Expenses expenseData={expenses}></Expenses>
         </div>
     );
 }

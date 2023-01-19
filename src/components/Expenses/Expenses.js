@@ -1,3 +1,4 @@
+import React from "react";
 import './Expenses.css'
 
 import ExpenseItem from "./ExpenseItem";
@@ -13,9 +14,11 @@ const Expenses = (props) => {
     return (
         <Card className='expenses'>
             <ExpensesFilter filterYearData={filterYear}></ExpensesFilter>
-            <ExpenseItem expenseData={props.data[0]}></ExpenseItem>
-            <ExpenseItem expenseData={props.data[1]}></ExpenseItem>
-            <ExpenseItem expenseData={props.data[2]}></ExpenseItem>
+            {
+                props.expenseData.map((expense) => {
+                    return <ExpenseItem expenseData={expense}></ExpenseItem>
+                })
+            }
         </Card>
     )
 }
